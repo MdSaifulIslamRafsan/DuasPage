@@ -1,4 +1,5 @@
 import Categories from "@/components/Categories/Categories";
+import DuaSection from "@/components/DuaSection/DuaSection";
 import Settings from "@/components/settings/Settings";
 import Navbar from "@/components/SharePage/Navbar";
 import Sidebar from "@/components/SharePage/Sidebar";
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <>
       <link rel="icon" href="/favicon.svg" />
-      <div className="my-5 max-w-[1440px] lg:w-11/12 w-[95%] mx-auto border">
+      <div className="my-5 max-w-[1440px] lg:w-11/12 w-[95%] mx-auto">
         <div className="lg:flex lg:gap-10">
           <div>
             <Sidebar></Sidebar>
@@ -17,8 +18,9 @@ export default function Home() {
             <Navbar></Navbar>
             <Settings></Settings>
           </div>
-            <div className="grid lg:grid-cols-3">
+            <div className="grid gap-5 lg:grid-cols-3">
                 <Categories></Categories>
+                <DuaSection></DuaSection>
             </div>
           </div>
         </div>
