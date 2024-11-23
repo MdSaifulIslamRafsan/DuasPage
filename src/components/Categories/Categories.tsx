@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import CategoriesCard from "./CategoiresCard";
 import { GoDotFill } from "react-icons/go";
@@ -25,7 +25,6 @@ const Categories: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
-  const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +49,7 @@ const Categories: React.FC = () => {
 
   const handleClickedCat = (cat_id: string) => {
     setSelectedCategoryId(cat_id);
-    const selectedCat = categoryRefs.current[cat_id];
+    const selectedCat = document.getElementById(cat_id);
     if (selectedCat) {
       selectedCat.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -75,10 +74,7 @@ const Categories: React.FC = () => {
       </div>
       <div className="overflow-auto max-h-[745px] px-3">
         {categories.map((category) => (
-          <div
-            key={category.cat_id}
-            ref={(el) => (categoryRefs.current[category.cat_id] = el)}
-          >
+          <div key={category.cat_id} id={category.cat_id}>
             <CategoriesCard
               category={category}
               handleClickedCat={() => handleClickedCat(category.cat_id)}
