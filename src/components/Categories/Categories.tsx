@@ -60,19 +60,19 @@ const Categories: React.FC = () => {
   );
 
   return (
-    <div className="col-span-1 rounded-lg bg-white">
+    <div className="lg:col-span-1 my-10 lg:my-0 rounded-lg bg-white">
       <div className="bg-[#1FA45B] rounded-t-lg text-lg py-[18px]">
         <h1 className="text-white font-semibold text-center">Categories</h1>
       </div>
       {/* Search bar */}
       <div className="relative w-full mx-auto bg-white my-4 px-3">
         <input
-          className="px-4 py-3 border border-gray-200 rounded-md w-full pl-[40px] outline-none focus:border-primary"
+          className="px-10 py-3 border border-gray-200 rounded-md w-full outline-none focus:border-primary"
           placeholder="Search by Categories"
         />
         <IoIosSearch className="absolute top-[15px] left-5 text-[1.5rem] text-[#adadad]" />
       </div>
-      <div className="overflow-auto h-[calc(100vh-300px)] px-3">
+      <div className="overflow-auto h-screen lg:h-[calc(100vh-300px)] px-3">
         {categories.map((category) => (
           <div key={category.cat_id} id={category.cat_id}>
             <CategoriesCard
@@ -86,7 +86,7 @@ const Categories: React.FC = () => {
                     <div className="flex relative items-start space-x-5 border-none">
                       <GoDotFill />
                       <button
-                        className="max-w-[310px] text-left"
+                        className="w-full text-left"
                         onClick={() => console.log(`Subcategory clicked: ${subcat.subcat_name_en}`)}
                       >
                         {subcat.subcat_name_en}

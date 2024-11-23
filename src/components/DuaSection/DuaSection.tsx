@@ -41,7 +41,7 @@ const DuaSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="col-span-2 h-[calc(100vh-155px)] overflow-auto">
+    <div className="lg:col-span-2 h-screen lg:h-[calc(100vh-155px)] overflow-auto">
       <div>
         <DuaSectionHeader />
       </div>

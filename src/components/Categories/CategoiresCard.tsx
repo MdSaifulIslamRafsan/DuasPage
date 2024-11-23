@@ -20,7 +20,7 @@ const CategoriesCard: React.FC<CategoriesCardProps> = ({ category, handleClicked
   return (
     <div
       onClick={handleClickedCat}
-      className="min-w-[60%] relative bg-white hover:bg-[#E8F0F5] shadow-md rounded-xl flex p-4 mx-auto mb-3 max-w-[400px]"
+      className="relative bg-white hover:bg-[#E8F0F5] shadow-md rounded-xl flex p-4 mx-auto mb-3"
     >
       <div className="w-[60px] h-[60px] bg-[#E8F0F5] flex items-center justify-center">
         <Image

@@ -18,7 +18,7 @@ export default function Home() {
             <Navbar></Navbar>
             <Settings></Settings>
           </div>
-            <div className="grid gap-5 lg:grid-cols-3">
+            <div className="lg:grid gap-5 lg:grid-cols-3">
                 <Categories></Categories>
                 <DuaSection></DuaSection>
             </div>
